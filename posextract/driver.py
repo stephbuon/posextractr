@@ -27,20 +27,20 @@ def extract_adj_noun_pairs(doc):
     return pairs
 
 
-def driver(hansard):
+def driver(hansard, col):
 
     nlp = spacy.load('en_core_web_sm')
     
     #hansard = pd.read_csv('/home/stephbuon/data/sample_data/full_hansard_sample.csv')
     #hansard_small = hansard[['text', 'sentence_id']].copy()
     
-    hansard_small['parsed_text'] = [doc for doc in nlp.pipe(hansard_small['text'].tolist())] # this turns into env
+    hansard['parsed_text'] = [doc for doc in nlp.pipe(hansard[col].tolist())] # this turns into env
 
-    hansard_small['adj_noun_pairs'] = hansard_small['parsed_text'].apply(extract_adj_noun_pairs)
-    hansard_small = hansard_small.loc[:, hansard_small.columns != 'parsed_text']
-    hansard_small = hansard_small[hansard_small.astype(str)['adj_noun_pairs'] != '[]']
+    hansard['adj_noun_pairs'] = hansard['parsed_text'].apply(extract_adj_noun_pairs)
+    hansard = hansard.loc[:, hansard.columns != 'parsed_text']
+    hansard = hansard[hansard.astype(str)['adj_noun_pairs'] != '[]']
 
-    hansard_small = hansard_small.explode('adj_noun_pairs')
+    hansard = hansard.explode('adj_noun_pairs')
 
-    return(hansard_small)
+    return(hansard)
     
