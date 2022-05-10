@@ -3,7 +3,10 @@ extract_adj_noun_pairs <- function(hansard) {
 
   reticulate::use_python("/usr/bin/python3")
 
-  t <- reticulate::import_from_path("posextract.driver", path = "./posextractr/", convert = TRUE)
+  path <- here()
+  path <- paste0(path, "/")
+
+  t <- reticulate::import_from_path("posextract.driver", path = path, convert = TRUE) #"./posextractr/", convert = TRUE)
 
   hansard_small <- t$driver(hansard)
 
