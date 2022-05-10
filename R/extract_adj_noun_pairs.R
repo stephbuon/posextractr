@@ -1,5 +1,5 @@
 #' @export
-extract_adj_noun_pairs <- function(hansard) {
+extract_adj_noun_pairs <- function(hansard, col) {
 
   reticulate::use_python("/usr/bin/python3")
 
@@ -10,7 +10,7 @@ extract_adj_noun_pairs <- function(hansard) {
 
 
   # import_from_path
-  hansard <- t$driver(hansard)
+  hansard <- t$driver(hansard, col)
 
   return(hansard) }
 
