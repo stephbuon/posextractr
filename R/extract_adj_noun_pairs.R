@@ -4,9 +4,9 @@ extract_adj_noun_pairs <- function(hansard) {
   reticulate::use_python("/usr/bin/python3")
 
   path <- here::here()
-  path <- paste0(path, "/posextract/")
+  path <- paste0(path, "/posextractr/")
 
-  t <- reticulate::import_from_path("trash.driver", path = "~/projects/", convert = T) #"./posextractr/", convert = TRUE)
+  t <- reticulate::import_from_path("posextract.driver", path = path) #"./posextractr/", convert = TRUE)
 
 
   # import_from_path

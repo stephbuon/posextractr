@@ -12,9 +12,15 @@ def extract_adj_noun_pairs(doc):
 
                     adj = doc[adj_index]
 
-                    for c in adj.children:
-                        if c.dep_ == 'neg':
-                            pairs.append(str(' '.join([c.text, child.text, subject.text])))
+                    _exhausted  = object()
+
+                    if next(adj.children, _exhausted) is not _exhausted:
+
+                        for c in adj.children:
+                            if c.dep_ == 'neg':
+                                pairs.append(str(' '.join([c.text, child.text, subject.text])))
+                            else:
+                                pairs.append(str(' '.join([child.text, subject.text])))
                     else:
                         pairs.append(str(' '.join([child.text, subject.text])))
 
