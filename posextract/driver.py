@@ -32,7 +32,7 @@ def driver(hansard):
     nlp = spacy.load('en_core_web_sm')
     
     #hansard = pd.read_csv('/home/stephbuon/data/sample_data/full_hansard_sample.csv')
-    hansard_small = hansard[['text', 'sentence_id']].copy()
+    #hansard_small = hansard[['text', 'sentence_id']].copy()
     
     hansard_small['parsed_text'] = [doc for doc in nlp.pipe(hansard_small['text'].tolist())] # this turns into env
 
