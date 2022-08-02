@@ -1,7 +1,8 @@
 #' @export
 extract_adj_noun_pairs <- function(hansard, col) {
 
-  reticulate::use_python("/usr/bin/python3")
+  #reticulate::use_python("/usr/bin/python3")
+  reticulate::use_python("~/miniconda/bin/python")
 
   #path <- here::here()
   #path <- paste0(path, "/posextractr/")
@@ -16,4 +17,5 @@ extract_adj_noun_pairs <- function(hansard, col) {
   hansard[] <- lapply(hansard, as.vector)
 
   return(hansard) }
+
 
