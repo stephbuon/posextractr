@@ -3,31 +3,35 @@ import warnings; warnings.simplefilter('ignore')
 import pandas as pd
 from spacy.symbols import amod, acomp, NOUN
 
-def extract_adj_noun_pairs(doc):
+def rules_adj_noun_pairs(doc):
     pairs = []
     for adjective in doc:
       if adjective.dep == amod or adjective.dep == acomp and adjective.head.pos == NOUN: # or adjective.dep == ccomp or adjective.dep == conj
-        #concat_extracted_pairs = ' '.join(adjective.text, adjective.head.lemma_)
         pairs.append(str(' '.join([adjective.text, adjective.head.lemma_])))
     return pairs
 
-def driver(hansard, col, **kwargs):
+def extract_adj_noun_pairs(df, *args, **kwargs):
 
     nlp = spacy.load('en_core_web_sm', disable = ['tagger', 'ner', 'attribute_ruler'])
     
-    kw = kwargs.get('keep', None)
+    if isinstance(df, pd.DataFrame):
+      col = kwargs.get('col', None)
+      keep = kwargs.get('keep', None)
+
+      if keep == 'keep':
+        df['parsed_text'] = [doc for doc in nlp.pipe(df[col].tolist())] # this turns into env
+        df['adj_noun_pair'] = df['parsed_text'].apply(rules_adj_noun_pairs)
+        df = df.loc[:, df.columns != 'parsed_text']
+      else:
+        df[col] = [doc for doc in nlp.pipe(df[col].tolist())] 
+        df['adj_noun_pair'] = df[col].apply(rules_adj_noun_pairs)
+        df = df.loc[:, df.columns == 'adj_noun_pair']
+
+      df = df[df.astype(str)['adj_noun_pair'] != '[]']
+      df = df.explode('adj_noun_pair')
     
-    if kw == 'keep':
-      hansard['parsed_text'] = [doc for doc in nlp.pipe(hansard[col].tolist())] # this turns into env
-      hansard['adj_noun_pair'] = hansard['parsed_text'].apply(extract_adj_noun_pairs)
-      hansard = hansard.loc[:, hansard.columns != 'parsed_text']
-    else:
-      hansard[col] = [doc for doc in nlp.pipe(hansard[col].tolist())] 
-      hansard['adj_noun_pair'] = hansard[col].apply(extract_adj_noun_pairs)
-      hansard = hansard.loc[:, hansard.columns == 'adj_noun_pair']
+    if isinstance(df, str):
+      pass
+    
 
-    hansard = hansard[hansard.astype(str)['adj_noun_pair'] != '[]']
-
-    hansard = hansard.explode('adj_noun_pair')
-
-    return(hansard)
+    return(df)
