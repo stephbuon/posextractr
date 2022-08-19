@@ -1,8 +1,49 @@
+# posextractr
 
+## Overview
 
-Example useage: 
+posextractr provides methods of grammatical information extraction designed for textual analysis.
+
+    `extract_triples()` extract subject-verb-object and subject-verb-adjective predicate triples.
+    `extract_adj_noun_pairs()` extract nouns and the adjectives that depend on them.
+    `extract_subj_verb_pairs()` extract subjects and their verbs. 
+
+## Installation
+
+Install using CRAN: 
 
 ```
+install.packages("posextractr")
+```
+
+Or using GitHub: 
+
+```
+require(devtools)
+install_github("stephbuon/posextractr")
+```
+
+First time use:
+
+```
+library("posextractr")
+posextract_install()
+posextract_initialize()
+```
+
+All other times: 
+```
+library("posextractr")
+posextract_initialize()
+```
+
+## Example Usage
+
+```
+library("posextractr")
+
+posextract_initialize()
+
 library("hansardr")
 
 data("hansard_1800")
