@@ -28,4 +28,4 @@ ggplot(data = adj_noun_pairs_count) +
        y = "Count") 
 ```
 
-![alt text](http://url/to/img.png)
+![placeholder](https://github.com/stephbuon/posextractr/blob/master/demo/rplot.png)
