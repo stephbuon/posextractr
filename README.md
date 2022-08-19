@@ -11,33 +11,30 @@ posextractr provides methods of grammatical information extraction designed for 
 ## Installation
 
 Install using CRAN: 
-
 ```
 install.packages("posextractr")
 ```
 
 Or using GitHub: 
-
 ```
 require(devtools)
 install_github("stephbuon/posextractr")
 ```
 
-First time use:
-
+For first time use you will need to run `posextract_install()`.
 ```
 library("posextractr")
 posextract_install()
 posextract_initialize()
 ```
 
-All other times: 
+For all other times you will just need to load the library and initialize posextract. 
 ```
 library("posextractr")
 posextract_initialize()
 ```
 
-## Example Usage
+## Usage
 
 ```
 library("posextractr")
