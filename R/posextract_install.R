@@ -9,7 +9,7 @@ posextract_install <- function() {
 
     if(input == 1) {
       virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy", "posextract"))
-      #system(command = "python -m spacy download en_core_web_sm")
+      system(command = "python -m spacy download en_core_web_sm")
       }
 
     else if(input == 2) {
