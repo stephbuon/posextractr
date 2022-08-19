@@ -4,9 +4,9 @@
 
 posextractr provides methods of grammatical information extraction designed for textual analysis.
 
-    `extract_triples()` extract subject-verb-object and subject-verb-adjective predicate triples.
-    `extract_adj_noun_pairs()` extract nouns and the adjectives that depend on them.
-    `extract_subj_verb_pairs()` extract subjects and their verbs. 
+`extract_triples()` extract subject-verb-object and subject-verb-adjective predicate triples.
+`extract_adj_noun_pairs()` extract nouns and the adjectives that depend on them.
+`extract_subj_verb_pairs()` extract subjects and their verbs. 
 
 ## Installation
 
