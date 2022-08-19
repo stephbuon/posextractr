@@ -2,5 +2,6 @@
 
 export(extract_adj_noun_pairs)
 export(extract_subj_verb_pairs)
+export(extract_triples)
 export(posextract_initialize)
 export(posextract_install)
