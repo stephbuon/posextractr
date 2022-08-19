@@ -8,8 +8,9 @@ posextract_install <- function() {
     input <- readline(prompt="Select Option: ")
 
     if(input == 1) {
-      virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy"))
-      system(command = "python -m spacy download en_core_web_sm") }
+      virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy", "posextract"))
+      #system(command = "python -m spacy download en_core_web_sm")
+      }
 
     else if(input == 2) {
       print("Skipping Install") }
