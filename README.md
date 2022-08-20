@@ -37,6 +37,17 @@ posextract_initialize()
 ## Usage
 
 ```
+extract_subj_verb_pairs(corpus, col)
+```
+
+Each function takes two arguments:
+
+- `corpus` is a data frame 
+- `col` is the column within the data frame to extract triples from
+
+## Example
+
+```
 library("posextractr")
 
 posextract_initialize()
