@@ -1,13 +1,21 @@
+#' Install posextractr and dependencies guided by a prompt.
+#'
+#' @usage posextract_install()
+#'
+#' @examples
+#' posextract_install()
+#'
 #' @export
 posextract_install <- function() {
 
   if(dir.exists(paste0(virtualenv_root(), '/r-posextract'))) {
     print("posextract has already been installed. Reinstall?")
-    print("Press 1 for reinstall")
-    print("Press 2 to pass")
+    print("Press 1 to reinstall")
+    print("Press 2 to skip install")
     input <- readline(prompt="Select Option: ")
 
     if(input == 1) {
+      print("Installing posextract...")
       virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy", "posextract"))
       system(command = "python -m spacy download en_core_web_sm")
       }
@@ -19,6 +27,7 @@ posextract_install <- function() {
       print("Not a valid option. Exiting.") } }
 
   else {
+    print("Installing posextract...")
     virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy"))
     system(command = "python -m spacy download en_core_web_sm") } }
 
