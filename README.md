@@ -49,11 +49,9 @@ Each function takes two arguments:
 
 ```
 library("posextractr")
-
-posextract_initialize()
-
 library("hansardr")
 
+posextract_initialize()
 data("hansard_1800")
 
 hansard_sample <- hansard_1800 %>%
