@@ -17,7 +17,8 @@ posextract_install <- function() {
     if(input == 1) {
       print("Installing posextract...")
       virtualenv_remove("r-posextract")
-      virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy", "posextract"))
+      virtualenv_create("r-posextract", install_python())#, packages = c("pandas", "spacy", "posextract"))
+      py_install(c("pandas", "spacy", "posextract"))
       system(command = "python -m spacy download en_core_web_sm")
       }
 
@@ -29,6 +30,7 @@ posextract_install <- function() {
 
   else {
     print("Installing posextract...")
-    virtualenv_create("r-posextract", install_python(), packages = c("pandas", "spacy", "posextract"))
+    virtualenv_create("r-posextract", install_python())#, packages = c("pandas", "spacy", "posextract"))
+    py_install(c("pandas", "spacy", "posextract"))
     system(command = "python -m spacy download en_core_web_sm") } }
 

@@ -7,4 +7,5 @@
 #'
 #' @export
 posextract_initialize <- function() {
-  use_virtualenv("r-posextract") }
+  use_virtualenv("r-posextract")
+  print('Initialized')}
