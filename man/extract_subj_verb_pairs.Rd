@@ -10,6 +10,6 @@ extract_subj_verb_pairs()
 Extract subject-verb pairs that grammatically agree with one-another from a text column in a data frame.
 }
 \examples{
-extract_subj_verb_pairs(dataframe, col_name)
+extract_subj_verb_pairs(dataframe$col_name)
 
 }

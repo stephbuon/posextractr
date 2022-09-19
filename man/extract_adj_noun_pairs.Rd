@@ -10,6 +10,6 @@ extract_adj_noun_pairs()
 Extract grammatical adjective-noun pairs that grammatically agree with one-another from a text column in a data frame.
 }
 \examples{
-extract_adj_noun_pairs(dataframe, col_name)
+extract_adj_noun_pairs(dataframe$col_name)
 
 }
