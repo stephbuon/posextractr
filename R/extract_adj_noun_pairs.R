@@ -10,5 +10,5 @@
 #' @export
 extract_adj_noun_pairs <- function(vect) {
   posextract <- import("posextract")
-  dataframe <- posextract$adj_noun_pairs$extract(vect)
+  dataframe <- posextract$adj_noun_pairs$extract(vect, lemmatize = FALSE, want_dataframe = TRUE, verbose = FALSE)
   return(dataframe) }
