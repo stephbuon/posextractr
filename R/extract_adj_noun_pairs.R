@@ -5,11 +5,10 @@
 #' @usage extract_adj_noun_pairs()
 #'
 #' @examples
-#' extract_adj_noun_pairs(dataframe, col_name)
+#' extract_adj_noun_pairs(dataframe$col_name)
 #'
 #' @export
 extract_adj_noun_pairs <- function(vect) {
   posextract <- import("posextract")
   dataframe <- posextract$adj_noun_pairs$extract(vect)
-  dataframe[] <- lapply(dataframe, as.vector)
   return(dataframe) }
