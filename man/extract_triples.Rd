@@ -2,14 +2,14 @@
 % Please edit documentation in R/extract_triples.R
 \name{extract_triples}
 \alias{extract_triples}
-\title{Extract grammatical triples from a text column in a data frame.}
+\title{Triples}
 \usage{
 extract_triples()
 }
 \description{
-Extract grammatical triples from a text column in a data frame.
+Extract triples that grammatically agree with one-another from a text column in a data frame.
 }
 \examples{
-extract_triples(dataframe, col_name)
+extract_triples(dataframe$col_name)
 
 }

@@ -2,12 +2,12 @@
 % Please edit documentation in R/extract_subj_verb_pairs.R
 \name{extract_subj_verb_pairs}
 \alias{extract_subj_verb_pairs}
-\title{Extract grammatical subject-verb pairs from a text column in a data frame.}
+\title{Subject-Verb Pairs}
 \usage{
 extract_subj_verb_pairs()
 }
 \description{
-Extract grammatical subject-verb pairs from a text column in a data frame.
+Extract subject-verb pairs that grammatically agree with one-another from a text column in a data frame.
 }
 \examples{
 extract_subj_verb_pairs(dataframe, col_name)

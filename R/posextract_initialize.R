@@ -1,4 +1,6 @@
-#' Initialize the posextract virtual environment (required when using posextract)
+#' Initialize posextract
+#'
+#' Initialize the posextract Python virtual environment. The environment must be activated to use functions from posextract.
 #'
 #' @usage posextract_initialize()
 #'

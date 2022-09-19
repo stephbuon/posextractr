@@ -2,12 +2,12 @@
 % Please edit documentation in R/posextract_install.R
 \name{posextract_install}
 \alias{posextract_install}
-\title{Install posextractr and dependencies guided by a prompt.}
+\title{Install posextract}
 \usage{
 posextract_install()
 }
 \description{
-Install posextractr and dependencies guided by a prompt.
+Prompts the user to install posextractr and dependencies.
 }
 \examples{
 posextract_install()

@@ -2,12 +2,12 @@
 % Please edit documentation in R/extract_adj_noun_pairs.R
 \name{extract_adj_noun_pairs}
 \alias{extract_adj_noun_pairs}
-\title{Extract grammatical adjective-noun pairs from a text column in a data frame.}
+\title{Adjective-Noun Pairs}
 \usage{
 extract_adj_noun_pairs()
 }
 \description{
-Extract grammatical adjective-noun pairs from a text column in a data frame.
+Extract grammatical adjective-noun pairs that grammatically agree with one-another from a text column in a data frame.
 }
 \examples{
 extract_adj_noun_pairs(dataframe, col_name)

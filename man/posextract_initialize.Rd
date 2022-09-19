@@ -2,12 +2,12 @@
 % Please edit documentation in R/posextract_initialize.R
 \name{posextract_initialize}
 \alias{posextract_initialize}
-\title{Initialize the posextract virtual environment (required when using posextract)}
+\title{Initialize posextract}
 \usage{
 posextract_initialize()
 }
 \description{
-Initialize the posextract virtual environment (required when using posextract)
+Initialize the posextract Python virtual environment. The environment must be activated to use functions from posextract.
 }
 \examples{
 posextract_initialize()
