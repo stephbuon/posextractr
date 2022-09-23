@@ -20,8 +20,9 @@ posextract_install <- function() {
       print("Installing posextract...")
       virtualenv_remove("r-posextract")
       virtualenv_create("r-posextract", install_python())
-      py_install(c("pandas", "spacy", "posextract")) # not work in function
-      system(command = "python3 -m spacy download en_core_web_sm") # same -- do I need python or python 3
+      py_install(c("pandas", "spacy", "posextract"))
+      download_spacy_lang_model()
+      #system(command = "python3 -m spacy download en_core_web_sm") # do I need python or python 3
       }
 
     else if(input == 2) {
