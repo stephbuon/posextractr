@@ -9,4 +9,5 @@
 #'
 #' @export
 download_spacy_lang_model <- function() {
+  posextract <- import("posextract")
   posextract$download_language_model$download_en_core_web_sm() }
