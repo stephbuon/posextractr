@@ -10,6 +10,6 @@
 #' @export
 extract_subj_verb_pairs <- function(vect) {
   posextract <- import("posextract")
-  dataframe <- posextract$subj_verb_pairs$extract(vect)
+  dataframe <- posextract$subj_verb_pairs$extract(vect, lemmatize = FALSE, want_dataframe = TRUE, verbose = FALSE)
   return(dataframe) }
 

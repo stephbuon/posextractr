@@ -1,7 +1,7 @@
 Package: posextractr
 Title: Grammatical Information Extraction Methods Designed for the Analysis of Historical and Contemporary Textual Corpora.
 Version: 0.0.0.9000
-Imports:
+Depends:
     reticulate,
     dplyr,
     here
