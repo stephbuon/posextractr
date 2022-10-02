@@ -10,12 +10,12 @@ posextractr provides methods of grammatical information extraction designed for 
 
 ## Installation
 
-Install using CRAN: 
+Install with CRAN: 
 ```
 install.packages("posextractr")
 ```
 
-Or using GitHub: 
+Or with GitHub: 
 ```
 require(devtools)
 install_github("stephbuon/posextractr")
