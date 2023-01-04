@@ -8,7 +8,8 @@
 #' extract_triples(dataframe$col_name)
 #'
 #' @export
-extract_triples <- function(vect) {
+extract_triples <- function(vect, combine_adj=F, lemmatize=F, add_aux=F) {
   posextract <- import("posextract")
-  dataframe <- posextract$grammatical_triples$extract(vect, combine_adj=F, lemmatize=F, add_aux=F, verbose =F, want_dataframe=T)
+  dataframe <- posextract$grammatical_triples$extract(vect, combine_adj, lemmatize, add_aux=F, verbose=F, want_dataframe=T)
+  dataframe <- na_if(dataframe, "") # empty strings to NA values
   return(dataframe) }
