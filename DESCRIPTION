@@ -7,8 +7,9 @@ Imports:
     here
 Authors@R: 
     person("Steph", "Buongiorno", , "steph.buon@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-6965-0787"))
-Description: Extract grammatical SVO/SVA triples, grammatical adjective-noun pairs, and grammatical subject-verb pairs. 
+           comment = c(ORCID = "0000-0002-6965-0787"),
+    person("Omar Alexander", "Cerpa", "acerpa@mail.smu.edu"))
+Description: Extract grammatical triples, adjective-noun pairs, and subject-verb pairs. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
