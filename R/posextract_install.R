@@ -5,6 +5,7 @@
 #' @importFrom reticulate virtualenv_root
 #' @importFrom reticulate virtualenv_remove
 #' @importFrom reticulate virtualenv_create
+#' @importFrom reticulate install_python
 #' @importFrom reticulate py_install
 #' @export
 posextract_install <- function() {
