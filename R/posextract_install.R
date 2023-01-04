@@ -1,6 +1,6 @@
 #' Install posextract
 #'
-#' Prompts the user to install or posextractr and dependencies. Users have the option to skip install.
+#' Prompts the user to install or posextractr and dependencies. Users have the option to skip.
 #'
 #' @importFrom reticulate virtualenv_root
 #' @importFrom reticulate virtualenv_remove

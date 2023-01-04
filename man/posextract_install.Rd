@@ -7,5 +7,5 @@
 posextract_install()
 }
 \description{
-Prompts the user to install or posextractr and dependencies. Users have the option to skip install.
+Prompts the user to install or posextractr and dependencies. Users have the option to skip.
 }
