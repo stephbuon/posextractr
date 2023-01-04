@@ -2,11 +2,8 @@
 #'
 #' Extract subject-verb pairs that grammatically agree with one-another from a text column in a data frame.
 #'
-#' @usage extract_subj_verb_pairs()
-#'
-#' @examples
-#' extract_subj_verb_pairs(dataframe$col_name)
-#'
+#' @importFrom reticulate import
+#' @importFrom dplyr na_if
 #' @export
 extract_subj_verb_pairs <- function(vect, lemmatize) {
   posextract <- import("posextract")

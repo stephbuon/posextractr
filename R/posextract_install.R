@@ -2,11 +2,10 @@
 #'
 #' Prompts the user to install posextractr and dependencies.
 #'
-#' @usage posextract_install()
-#'
-#' @examples
-#' posextract_install()
-#'
+#' @importFrom reticulate virtualenv_root
+#' @importFrom reticulate virtualenv_remove
+#' @importFrom reticulate virtualenv_create
+#' @importFrom reticulate py_install
 #' @export
 posextract_install <- function() {
 
@@ -21,9 +20,7 @@ posextract_install <- function() {
       virtualenv_remove("r-posextract")
       virtualenv_create("r-posextract", install_python())
       py_install(c("pandas", "spacy", "posextract"))
-      download_spacy_lang_model()
-      #system(command = "python3 -m spacy download en_core_web_sm") # do I need python or python 3
-      }
+      download_spacy_lang_model() }
 
     else if(input == 2) {
       print("Skipping Install.") }

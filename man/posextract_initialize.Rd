@@ -9,7 +9,3 @@ posextract_initialize()
 \description{
 Initialize the posextract Python virtual environment. The environment must be activated to use functions from posextract.
 }
-\examples{
-posextract_initialize()
-
-}

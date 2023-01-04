@@ -4,12 +4,8 @@
 \alias{extract_adj_noun_pairs}
 \title{Adjective-Noun Pairs}
 \usage{
-extract_adj_noun_pairs()
+extract_adj_noun_pairs(vect, lemmatize)
 }
 \description{
 Extract grammatical adjective-noun pairs that grammatically agree with one-another from a text column in a data frame.
-}
-\examples{
-extract_adj_noun_pairs(dataframe$col_name)
-
 }

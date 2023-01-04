@@ -2,11 +2,7 @@
 #'
 #' Download the small English spaCy langauge model.
 #'
-#' @usage download_spacy_lang_model()
-#'
-#' @examples
-#' download_spacy_lang_model()
-#'
+#' @importFrom reticulate import
 #' @export
 download_spacy_lang_model <- function() {
   posextract <- import("posextract")

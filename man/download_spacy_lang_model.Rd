@@ -9,7 +9,3 @@ download_spacy_lang_model()
 \description{
 Download the small English spaCy langauge model.
 }
-\examples{
-download_spacy_lang_model()
-
-}

@@ -4,12 +4,8 @@
 \alias{extract_subj_verb_pairs}
 \title{Subject-Verb Pairs}
 \usage{
-extract_subj_verb_pairs()
+extract_subj_verb_pairs(vect, lemmatize)
 }
 \description{
 Extract subject-verb pairs that grammatically agree with one-another from a text column in a data frame.
-}
-\examples{
-extract_subj_verb_pairs(dataframe$col_name)
-
 }

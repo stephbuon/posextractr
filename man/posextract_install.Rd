@@ -9,7 +9,3 @@ posextract_install()
 \description{
 Prompts the user to install posextractr and dependencies.
 }
-\examples{
-posextract_install()
-
-}
