@@ -8,5 +8,5 @@
 extract_adj_noun_pairs <- function(vect, lemmatize) {
   posextract <- import("posextract")
   dataframe <- posextract$adj_noun_pairs$extract(vect, lemmatize, want_dataframe = TRUE, verbose = FALSE)
-  dataframe <- na_if(dataframe, "") # empty strings to NA values
+  dataframe <- mutate_all(dataframe, ~na_if(., ""))
   return(dataframe) }

@@ -1,14 +1,12 @@
 Package: posextractr
 Title: Grammatical Information Extraction Methods Designed for the Analysis of Historical and Contemporary Textual Corpora.
-Version: 0.0.0.9000
+Version: 1.0.0
 Imports:
     reticulate,
-    dplyr,
-    here
+    dplyr
 Authors@R: 
     person("Steph", "Buongiorno", , "steph.buon@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-6965-0787"),
-    person("Omar Alexander", "Cerpa", "acerpa@mail.smu.edu"))
+           comment = c(ORCID = "0000-0002-6965-0787"))
 Description: Extract grammatical triples, adjective-noun pairs, and subject-verb pairs. 
 License: MIT + file LICENSE
 Encoding: UTF-8
