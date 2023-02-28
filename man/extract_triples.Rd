@@ -4,11 +4,7 @@
 \alias{extract_triples}
 \title{Triples}
 \usage{
-
-data("hansard_random"")
-
 extract_triples(vect, combine_adj = F, lemmatize = F, add_aux = F)
-
 }
 \description{
 Extract triples that grammatically agree with one-another from a text column in a data frame.
