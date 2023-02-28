@@ -4,6 +4,7 @@
 #'
 #' @importFrom reticulate import
 #' @importFrom dplyr na_if
+#' @importFrom dplyr mutate_all
 #' @export
 extract_adj_noun_pairs <- function(vect, lemmatize) {
   posextract <- import("posextract")
