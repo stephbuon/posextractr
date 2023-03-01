@@ -4,6 +4,7 @@
 #'
 #' @importFrom reticulate import
 #' @importFrom dplyr na_if
+#' @importFrom dplyr mutate_all
 #' @export
 extract_triples <- function(vect, combine_adj=F, lemmatize=F, add_aux=F) {
   posextract <- import("posextract")
